@@ -12,10 +12,10 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 app = FastAPI()
 
 # Load your models
-face_classifier = cv2.CascadeClassifier(r'app\model\haarcascade_frontalface_default.xml')
-model = tf.keras.models.load_model(r'app\model\my_model (1).h5')
-age_model = tf.keras.models.load_model(r'app\model\alancheri_age_model_50epochs.h5')
-emotion_model = tf.keras.models.load_model(r'app\model\emotion_detection_model_100epochs.h5')
+face_classifier = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
+model = tf.keras.models.load_model(r'my_model (1).h5')
+age_model = tf.keras.models.load_model(r'alancheri_age_model_50epochs.h5')
+emotion_model = tf.keras.models.load_model(r'emotion_detection_model_100epochs.h5')
 gender_labels = ['Male', 'Female']
 class_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
